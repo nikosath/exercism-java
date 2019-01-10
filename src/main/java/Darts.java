@@ -16,27 +16,26 @@ class Darts {
         }
         return 0;
     }
+}
 
-    private static enum CircleArea {
-        INNER(1, 10),
-        MIDDLE(5, 5),
-        OUTER(10, 1);
+enum CircleArea {
+    INNER(1, 10),
+    MIDDLE(5, 5),
+    OUTER(10, 1);
 
-        private double radius;
-        private int pointsAwarded;
+    private double radius;
+    private int pointsAwarded;
 
-        CircleArea(double radius, int pointsAwarded) {
-            this.radius = radius;
-            this.pointsAwarded = pointsAwarded;
-        }
-
-        public int getPointsAwarded() {
-            return pointsAwarded;
-        }
-
-        public boolean hasRadius(double radius) {
-            return radius <= this.radius;
-        }
+    CircleArea(double radius, int pointsAwarded) {
+        this.radius = radius;
+        this.pointsAwarded = pointsAwarded;
     }
 
+    public int getPointsAwarded() {
+        return pointsAwarded;
+    }
+
+    public boolean hasRadius(double radius) {
+        return radius <= this.radius;
+    }
 }
