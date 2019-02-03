@@ -1,7 +1,7 @@
 class Hamming {
 
-    private String leftStrand;
-    private String rightStrand;
+    private final String leftStrand;
+    private final String rightStrand;
 
     Hamming(String leftStrand, String rightStrand) {
         if (leftStrand.length() != rightStrand.length()) {
@@ -12,11 +12,9 @@ class Hamming {
     }
 
     int getHammingDistance() {
-        char[] leftArr = leftStrand.toCharArray();
-        char[] rightArr = rightStrand.toCharArray();
         int distance = 0;
-        for (int i = 0; i < leftArr.length; i++) {
-            if (leftArr[i] != rightArr[i]) {
+        for (int i = 0; i < leftStrand.length(); i++) {
+            if (leftStrand.charAt(i) != rightStrand.charAt(i)) {
                 distance++;
             }
         }
